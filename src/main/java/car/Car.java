@@ -1,4 +1,4 @@
-package carpackage;
+package car;
 
 public class Car {
 
@@ -28,13 +28,6 @@ public class Car {
 
     public void setYear(int year) {
         this.year = year;
-    }
-
-    public void showCarInfo() {
-        System.out.println("Marca: " + brand);
-        System.out.println("Modelo: " + model);
-        System.out.println("Ano: " + year);
-
     }
 
 }
