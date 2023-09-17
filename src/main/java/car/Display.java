@@ -26,7 +26,8 @@ public class Display {
 
         System.out.print("Quilometragem: ");
         int kilometers = scanner.nextInt();
-        car.setKilometers(kilometers);
+        SpeedRadar radar = new SpeedRadar();
+        radar.radar(car, kilometers);
 
         scanner.nextLine();
     }

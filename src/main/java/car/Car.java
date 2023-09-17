@@ -39,4 +39,12 @@ public class Car {
     public void setKilometers(int kilometers) {
         this.kilometers = kilometers;
     }
+
+    public void radar(int kilometersAdd) {
+        if (kilometersAdd >= 0) {
+            this.kilometers += kilometersAdd;
+        } else {
+            System.out.println("Não é possível adicionar quilômetros negativos");
+        }
+    }
 }
