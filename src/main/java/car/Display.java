@@ -31,4 +31,9 @@ public class Display {
 
         scanner.nextLine();
     }
+
+    public static void setSpeedSportCar() {
+        System.out.print("Acelerando o carro esportivo!");
+
+    }
 }

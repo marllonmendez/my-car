@@ -1,4 +1,5 @@
 import car.Car;
+import car.SportCar;
 import car.Display;
 
 public class Main {
@@ -10,5 +11,9 @@ public class Main {
 
         System.out.println("\n--- Questão 02 ---");
         Display.setKilometers(myCar);
+
+        System.out.println("\n--- Questão 03 ---");
+        SportCar mySportCar = new SportCar();
+        Display.setSpeedSportCar();
     }
 }

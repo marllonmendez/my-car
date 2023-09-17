@@ -1,12 +1,13 @@
 # Meu Carro
 
-- No terminal, no diretório raiz do projeto MyCar para ``compila``, utilize o comando a seguir:
+No diretório raiz do projeto utilize esses comandos na seguinte ordem:
 
+#### Compilação
 ```bash
-javac -d bin src/main/java/car/*.java src/main/java/*.java
+javac -d bin src\main\java\car\*.java src\main\java\*.java
 ```
-- Em seguida, para ``executar`` o programa, utilize o comando a seguir:
 
+#### Execução
 ```bash
 java -cp bin Main
 ```
