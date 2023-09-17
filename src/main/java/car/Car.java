@@ -6,6 +6,8 @@ public class Car {
     private String model;
     private int year;
 
+    private int kilometers;
+
     public String getBrand() {
         return brand;
     }
@@ -16,6 +18,10 @@ public class Car {
 
     public int getYear() {
         return year;
+    }
+
+    public int getKilometers() {
+        return kilometers;
     }
 
     public void setBrand(String brand) {
@@ -30,4 +36,7 @@ public class Car {
         this.year = year;
     }
 
+    public void setKilometers(int kilometers) {
+        this.kilometers = kilometers;
+    }
 }
