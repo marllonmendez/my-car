@@ -6,7 +6,6 @@ public class Display {
     private static Scanner scanner = new Scanner(System.in);
 
     public static void setCar(Car car) {
-
         System.out.print("Marca: ");
         String brand = scanner.nextLine();
         car.setBrand(brand);
@@ -23,7 +22,6 @@ public class Display {
     }
 
     public static void setKilometers(Car car) {
-
         System.out.print("Quilometragem: ");
         int kilometers = scanner.nextInt();
         SpeedRadar radar = new SpeedRadar();
@@ -32,8 +30,24 @@ public class Display {
         scanner.nextLine();
     }
 
-    public static void setSpeedSportCar() {
-        System.out.print("Acelerando o carro esportivo!");
+    public static void setSpeedSportCar(SportCar sportCar) {
+        System.out.println("Acelerando o carro esportivo!");
 
+        System.out.print("Marca: ");
+        String brand = scanner.nextLine();
+        sportCar.setBrand(brand);
+
+        System.out.print("Modelo: ");
+        String model = scanner.nextLine();
+        sportCar.setModel(model);
+
+        System.out.print("Ano: ");
+        int year = scanner.nextInt();
+        sportCar.setYear(year);
+
+        scanner.nextLine();
+
+        String sportCarInfo = sportCar.toString();
+        System.out.println(sportCarInfo);
     }
 }

@@ -12,4 +12,9 @@ public class SportCar extends Car{
     public void setSpeed(String speed) {
         this.speed = speed;
     }
+
+    public String toString() {
+        return "\nMarca: " + getBrand() + ", Modelo: " + getModel() + ", Ano: " + getYear();
+    }
+
 }

@@ -4,7 +4,6 @@ import car.Display;
 
 public class Main {
     public static void main(String[] args) {
-
         System.out.println("--- Questão 01 ---");
         Car myCar = new Car();
         Display.setCar(myCar);
@@ -14,6 +13,6 @@ public class Main {
 
         System.out.println("\n--- Questão 03 ---");
         SportCar mySportCar = new SportCar();
-        Display.setSpeedSportCar();
+        Display.setSpeedSportCar(mySportCar);
     }
 }
