@@ -6,13 +6,6 @@ public class Engine {
     private int power;
     private boolean start;
 
-    public Engine(String type, int power, boolean start) {
-        this.type = type;
-        this.power = power;
-        this.start = false;
-    }
-
-
     public String getType() {
         return type;
     }
@@ -23,6 +16,18 @@ public class Engine {
 
     public boolean isStart() {
         return start;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public void setPower(int power) {
+        this.power = power;
+    }
+
+    public void setStart(boolean start) {
+        this.start = start;
     }
 
     public void start() {
@@ -44,6 +49,6 @@ public class Engine {
     }
 
     public String toString() {
-        return "Motor: " + getType() + ", Potência: " + getPower() + "HP";
+        return "Motor: " + getType() + ", Potência: " + getPower() + " HP";
     }
 }

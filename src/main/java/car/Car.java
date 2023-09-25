@@ -11,7 +11,6 @@ public class Car {
     private int kilometers;
     private  Engine engine;
 
-
     public String getBrand() {
         return brand;
     }
@@ -67,7 +66,13 @@ public class Car {
     }
 
     public void turnOffCar() {
-        System.out.println("Desligando o carro");
+        System.out.println("Desligando o carro...");
         engine.turnOff();
     }
+
+
+    public String toString() {
+        return "Marca: " + getBrand() + ", Modelo: " + getModel() + ", Ano: " + getYear() + ", Motor: " + engine.getType() + ", Potência: " + engine.getPower() + " HP";
+    }
+
 }

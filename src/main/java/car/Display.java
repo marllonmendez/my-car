@@ -27,25 +27,31 @@ public class Display {
         SpeedRadar radar = new SpeedRadar();
         radar.radar(car, kilometers);
 
+        System.out.println("A Quilometragem atual do carro é: " + car.getKilometers());
+
         scanner.nextLine();
     }
 
     public static void setSpeedSportCar(SportCar sportCar) {
-        System.out.println("Acelerando o carro esportivo!");
+        System.out.println("Acelerando o carro esportivo!\n");
 
-        System.out.print("Qual a marca do carro esportivo? \n");
+        System.out.println("Qual a marca do carro esportivo:");
         String brand = scanner.nextLine();
         sportCar.setBrand(brand);
 
-        System.out.print("Qual o modelo do carro esportivo? \n");
+        System.out.println("Qual o modelo do carro esportivo:");
         String model = scanner.nextLine();
         sportCar.setModel(model);
 
-        System.out.print("Qual o ano do carro esportivo? \n");
+        System.out.println("Qual o ano do carro esportivo:");
         int year = scanner.nextInt();
         sportCar.setYear(year);
 
-        System.out.print("Qual a velociade do carro esportivo? \n");
+        System.out.println("Qual a velociade atual do carro esportivo:");
+        int currentSpeed = scanner.nextInt();
+        sportCar.setCurrentSpeed(currentSpeed);
+
+        System.out.println("Qual a velociade máxima do carro esportivo:");
         int speedMax = scanner.nextInt();
         sportCar.setSpeedMax(speedMax);
 
@@ -55,43 +61,38 @@ public class Display {
 
         scanner.nextLine();
     }
-
-//    public static void setCarEngine(Car car) {
-//        System.out.print("Qual o tipo do motor? \n");
-//        String type = scanner.nextLine();
-//        car.type(type);
-//
-//        System.out.print("Qual a potência do motor? \n");
-//        int power = scanner.nextInt();
-//        car.power(power);
-//
-//        System.out.print("Ligar o motor do carro? (true/false) \n");
-//        boolean start = Boolean.parseBoolean(scanner.nextLine());
-//
-//        Engine engine = new Engine(type, power, start);
-//        car.setEngine(engine);
-//
-//        car.startCar();
-//    }
-
-    public static void setCarEngine(Car car) {
-
-        System.out.print("Qual o tipo do motor? ");
+    public static void setEngine(Engine engine, Car car) {
+        System.out.println("Qual o motor do carro:");
         String type = scanner.nextLine();
-        car.getEngine(type);
+        engine.setType(type);
 
-        System.out.print("Qual a potência do motor? ");
+        System.out.println("Qual a potência do motor:");
         int power = scanner.nextInt();
-        car.getEngine(power);
+        engine.setPower(power);
 
-        scanner.nextLine(); // Consuma a nova linha pendente
+        car.setEngine(engine);
 
-        System.out.print("Ligar o motor do carro? (true/false) ");
-        boolean start = Boolean.parseBoolean(scanner.nextLine());
-        car.getEngine(start);
+        System.out.println("\nInformações do motor do carro:");
+        System.out.println(engine.toString());
 
-        car.startCar();
+        scanner.nextLine();
+
+        System.out.println("--------------------");
+        System.out.println("Me informe agora esse novo carro:");
+        Display.setCar(car);
     }
 
+    public static void setStartEngine(Car car) {
+        System.out.println("\nDeseja ligar o carro? (s/n)");
+        String response = scanner.nextLine();
 
+        if (response.equalsIgnoreCase("s")) {
+            System.out.println("--------------------");
+            car.startCar();
+            System.out.println(car.toString());
+        } else {
+            System.out.println("--------------------");
+            car.turnOffCar();
+        }
+    }
 }
